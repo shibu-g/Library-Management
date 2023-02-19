@@ -45,7 +45,7 @@ let date=new Date().toLocaleString();
   //  a.id=id;
   //  a.innerHTML='<span class="material-icons md-36">edit_square</span>';
    td5.innerHTML+=' <a onclick="fun2('+id+')""><span class="material-icons md-36">edit_square</span></a>';
-  if(!nam="" && !issu=="")
+  if(!nam=="" && !issu=="")
    tbl.append(tr);
 }
 function fun2(id){
