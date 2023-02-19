@@ -29,7 +29,7 @@ let date=new Date().toLocaleString();
      st.innerHTML="Not Returned"
     //  let status=st;
      let id=arr.length+1;
-     let obj={id,name,to,date,st};
+     let obj={id,name.value,to.value,date,st};
  arr.push(obj);
    td2.innerHTML=name.value;
    td3.innerHTML=to.value;
