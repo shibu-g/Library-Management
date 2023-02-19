@@ -28,8 +28,10 @@ let date=new Date().toLocaleString();
      st.classList.add('red');
      st.innerHTML="Not Returned"
     //  let status=st;
+    let nam=name.value;
+ let issu=to.value;
      let id=arr.length+1;
-     let obj={id,name.value,to.value,date,st};
+     let obj={id,nam,issu,date,st};
  arr.push(obj);
    td2.innerHTML=name.value;
    td3.innerHTML=to.value;
@@ -43,7 +45,7 @@ let date=new Date().toLocaleString();
   //  a.id=id;
   //  a.innerHTML='<span class="material-icons md-36">edit_square</span>';
    td5.innerHTML+=' <a onclick="fun2('+id+')""><span class="material-icons md-36">edit_square</span></a>';
-  if(name.value && to.value)
+  if(!nam="" && !issu=="")
    tbl.append(tr);
 }
 function fun2(id){
@@ -80,8 +82,8 @@ function rander(){
     let td5=tr.appendChild(document.createElement('td'));
 
 
-         let name=ele.name;
-         let to=ele.to;
+         let name=ele.nam;
+         let to=ele.issu;
          let status=ele.st;
          let id=ele.id;
          let date=ele.date;
