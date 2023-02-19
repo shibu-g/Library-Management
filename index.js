@@ -22,8 +22,8 @@ let td4=tr.appendChild(document.createElement('td'));
 let td5=tr.appendChild(document.createElement('td'));
 let date=new Date().toLocaleString();
 // alert(date);
-     let name=document.querySelector(".name").value;
-     let to=document.querySelector(".issued").value;
+     let name=document.querySelector(".name");
+     let to=document.querySelector(".issued");
      let st=document.createElement('span');
      st.classList.add('red');
      st.innerHTML="Not Returned"
@@ -31,11 +31,13 @@ let date=new Date().toLocaleString();
      let id=arr.length+1;
      let obj={id,name,to,date,st};
  arr.push(obj);
-   td2.innerHTML=name;
-   td3.innerHTML=to;
+   td2.innerHTML=name.value;
+   td3.innerHTML=to.value;
    td1.innerHTML=id;
    td4.innerHTML=date;
    td5.appendChild(st);
+ name.value="";
+ to.value="";
   //  console.log(st);
   //  let a=document.createElement('a');
   //  a.id=id;
@@ -45,8 +47,6 @@ let date=new Date().toLocaleString();
   // td5.innerHTML+=a; 
   if(!name=="" && !to=="")
    tbl.append(tr);
- name="";
- to="";
 }
 function fun2(id){
   let st1=document.createElement('span');
