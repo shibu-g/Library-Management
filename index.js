@@ -31,8 +31,7 @@ let date=new Date().toLocaleString();
     let nam=name.value;
  let issu=to.value;
      let id=arr.length+1;
-     let obj={id,nam,issu,date,st};
- arr.push(obj);
+     
    td2.innerHTML=name.value;
    td3.innerHTML=to.value;
    td1.innerHTML=id;
@@ -40,13 +39,12 @@ let date=new Date().toLocaleString();
    td5.appendChild(st);
  name.value="";
  to.value="";
-  //  console.log(st);
-  //  let a=document.createElement('a');
-  //  a.id=id;
-  //  a.innerHTML='<span class="material-icons md-36">edit_square</span>';
    td5.innerHTML+=' <a onclick="fun2('+id+')""><span class="material-icons md-36">edit_square</span></a>';
-  if(!nam=="" && !issu=="")
+  if(!nam=="" && !issu==""){
    tbl.append(tr);
+   let obj={id,nam,issu,date,st};
+ arr.push(obj);
+   }
 }
 function fun2(id){
   let st1=document.createElement('span');
